@@ -1,0 +1,10 @@
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\bin\Debug\Reinos Lokos.exe
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\bin\Debug\Reinos Lokos.pdb
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\obj\x86\Debug\Reinos Lokos.exe
+C:\Users\melchor\documents\visual studio 2010\Projects\Reinos Lokos\Reinos Lokos\obj\x86\Debug\Reinos Lokos.pdb
+C:\Users\melchor\Documents\Visual Studio 2010\Projects\Reinos Lokos\Reinos Lokos\bin\Debug\Reinos Lokos.exe.config
