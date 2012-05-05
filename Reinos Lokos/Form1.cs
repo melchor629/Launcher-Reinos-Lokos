@@ -80,12 +80,16 @@ namespace WindowsFormsApplication1
 
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
+			webBrowser2.Visible = false;
+			if (Settings.Default.noticias)
+            	{
+					webBrowser2.Visible = true;
+				}
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -191,7 +195,6 @@ namespace WindowsFormsApplication1
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
 
     }
 }

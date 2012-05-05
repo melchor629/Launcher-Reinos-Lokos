@@ -23,5 +23,8 @@
     <Setting Name="nombre2" Type="System.String" Scope="User">
       <Value Profile="(Default)">Cataclysm</Value>
     </Setting>
+    <Setting Name="noticias" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

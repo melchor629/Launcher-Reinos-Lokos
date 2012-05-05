@@ -103,5 +103,17 @@ namespace WindowsFormsApplication1.Properties {
                 this["nombre2"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool noticias {
+            get {
+                return ((bool)(this["noticias"]));
+            }
+            set {
+                this["noticias"] = value;
+            }
+        }
     }
 }

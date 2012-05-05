@@ -46,7 +46,9 @@
             this.cerrar = new System.Windows.Forms.Label();
             this.barradesp = new System.Windows.Forms.Label();
             this.play = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -90,7 +92,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(284, 269);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("http://reinoslokos.no-ip.org/panel/login/?dash", System.UriKind.Absolute);
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // pictureBox1
             // 
@@ -200,13 +201,13 @@
             // 
             this.barradesp.BackColor = System.Drawing.Color.Transparent;
             this.barradesp.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.barradesp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barradesp.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barradesp.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.barradesp.Location = new System.Drawing.Point(1, 1);
             this.barradesp.Name = "barradesp";
-            this.barradesp.Size = new System.Drawing.Size(926, 40);
+            this.barradesp.Size = new System.Drawing.Size(926, 33);
             this.barradesp.TabIndex = 13;
-            this.barradesp.Text = "    Launcher";
+            this.barradesp.Text = "    Launcher - Reinos Lokos";
             this.barradesp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barradesp_MouseDown);
             // 
             // play
@@ -219,6 +220,17 @@
             this.play.TabIndex = 14;
             this.play.Text = "Jugar al WOW";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::WindowsFormsApplication1.Properties.Resources.wow_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +238,7 @@
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(930, 628);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.play);
             this.Controls.Add(this.cerrar);
             this.Controls.Add(this.label3);
@@ -247,6 +260,7 @@
             this.TransparencyKey = System.Drawing.Color.Magenta;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,6 +284,7 @@
         private System.Windows.Forms.Label cerrar;
         private System.Windows.Forms.Label barradesp;
         private System.Windows.Forms.Label play;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
