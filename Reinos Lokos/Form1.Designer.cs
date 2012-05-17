@@ -111,7 +111,7 @@
             this.webBrowser2.ScrollBarsEnabled = false;
             this.webBrowser2.Size = new System.Drawing.Size(284, 290);
             this.webBrowser2.TabIndex = 5;
-            this.webBrowser2.Url = new System.Uri("http://reinoslokos.no-ip.org/mobile", System.UriKind.Absolute);
+            this.webBrowser2.Url = new System.Uri("http://reinoslokos.no-ip.org/mobile/", System.UriKind.Absolute);
             // 
             // button2
             // 
