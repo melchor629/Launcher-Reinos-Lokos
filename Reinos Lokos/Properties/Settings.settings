@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="server" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">lordsofchaos.no-ip.biz</Value>
+      <Value Profile="(Default)">dark-night.no-ip.org</Value>
     </Setting>
     <Setting Name="port" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">8085</Value>
@@ -12,19 +12,19 @@
       <Value Profile="(Default)">80</Value>
     </Setting>
     <Setting Name="port2_enabled" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="realmlist" Type="System.String" Scope="User">
-      <Value Profile="(Default)">set realmlist lordsofchaos.no-ip.biz</Value>
+      <Value Profile="(Default)">set realmlist dark-night.no-ip.org</Value>
     </Setting>
     <Setting Name="nombre1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Lich King</Value>
+      <Value Profile="(Default)">/Frozen Age\</Value>
     </Setting>
     <Setting Name="nombre2" Type="System.String" Scope="User">
       <Value Profile="(Default)">Cataclysm</Value>
     </Setting>
     <Setting Name="noticias" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

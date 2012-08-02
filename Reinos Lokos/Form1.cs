@@ -73,7 +73,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                System.Diagnostics.Process.Start("http://reinoslokos.no-ip.org");
+                System.Diagnostics.Process.Start("http://dark-night.no-ip.org");
             }
             catch { }
         }
@@ -194,6 +194,11 @@ namespace WindowsFormsApplication1
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void play_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

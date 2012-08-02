@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("lordsofchaos.no-ip.biz")]
+        [global::System.Configuration.DefaultSettingValueAttribute("dark-night.no-ip.org")]
         public string server {
             get {
                 return ((string)(this["server"]));
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool port2_enabled {
             get {
                 return ((bool)(this["port2_enabled"]));
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("set realmlist lordsofchaos.no-ip.biz")]
+        [global::System.Configuration.DefaultSettingValueAttribute("set realmlist dark-night.no-ip.org")]
         public string realmlist {
             get {
                 return ((string)(this["realmlist"]));
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Lich King")]
+        [global::System.Configuration.DefaultSettingValueAttribute("/Frozen Age\\")]
         public string nombre1 {
             get {
                 return ((string)(this["nombre1"]));
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool noticias {
             get {
                 return ((bool)(this["noticias"]));
