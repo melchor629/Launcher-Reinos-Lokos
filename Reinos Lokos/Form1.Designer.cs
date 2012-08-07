@@ -97,7 +97,7 @@
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.periodico;
             this.pictureBox1.InitialImage = global::WindowsFormsApplication1.Properties.Resources.periodico;
-            this.pictureBox1.Location = new System.Drawing.Point(824, 495);
+            this.pictureBox1.Location = new System.Drawing.Point(783, 301);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 55);
             this.pictureBox1.TabIndex = 4;
@@ -132,7 +132,7 @@
             this.status1.BackColor = System.Drawing.Color.Transparent;
             this.status1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status1.ForeColor = System.Drawing.Color.Red;
-            this.status1.Location = new System.Drawing.Point(616, 117);
+            this.status1.Location = new System.Drawing.Point(330, 143);
             this.status1.Name = "status1";
             this.status1.Size = new System.Drawing.Size(0, 33);
             this.status1.TabIndex = 7;
@@ -145,7 +145,7 @@
             this.statusLabel.BackColor = System.Drawing.Color.Transparent;
             this.statusLabel.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusLabel.ForeColor = System.Drawing.Color.Red;
-            this.statusLabel.Location = new System.Drawing.Point(445, 84);
+            this.statusLabel.Location = new System.Drawing.Point(159, 110);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(247, 33);
             this.statusLabel.TabIndex = 8;
@@ -159,7 +159,7 @@
             this.status2.BackColor = System.Drawing.Color.Transparent;
             this.status2.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status2.ForeColor = System.Drawing.Color.Red;
-            this.status2.Location = new System.Drawing.Point(616, 159);
+            this.status2.Location = new System.Drawing.Point(330, 185);
             this.status2.Name = "status2";
             this.status2.Size = new System.Drawing.Size(0, 33);
             this.status2.TabIndex = 9;
@@ -170,7 +170,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(461, 118);
+            this.label2.Location = new System.Drawing.Point(175, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 30);
             this.label2.TabIndex = 10;
@@ -180,7 +180,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(461, 148);
+            this.label3.Location = new System.Drawing.Point(175, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 30);
             this.label3.TabIndex = 11;
@@ -194,7 +194,7 @@
             this.cerrar.BackColor = System.Drawing.Color.Transparent;
             this.cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cerrar.Image = ((System.Drawing.Image)(resources.GetObject("cerrar.Image")));
-            this.cerrar.Location = new System.Drawing.Point(892, 1);
+            this.cerrar.Location = new System.Drawing.Point(800, 1);
             this.cerrar.Name = "cerrar";
             this.cerrar.Size = new System.Drawing.Size(37, 31);
             this.cerrar.TabIndex = 12;
@@ -217,11 +217,12 @@
             // 
             this.play.BackColor = System.Drawing.Color.Transparent;
             this.play.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.play.Location = new System.Drawing.Point(337, 487);
+            this.play.Image = global::WindowsFormsApplication1.Properties.Resources.play___copia;
+            this.play.ImageKey = "(ninguno)";
+            this.play.Location = new System.Drawing.Point(303, 468);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(261, 133);
+            this.play.Size = new System.Drawing.Size(243, 179);
             this.play.TabIndex = 14;
-            this.play.Text = "Jugar al WOW";
             this.play.Click += new System.EventHandler(this.play_Click);
             // 
             // pictureBox2
@@ -240,8 +241,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(930, 628);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(840, 630);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.play);
             this.Controls.Add(this.cerrar);
@@ -287,8 +288,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label cerrar;
         private System.Windows.Forms.Label barradesp;
-        private System.Windows.Forms.Label play;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label play;
     }
 }
 

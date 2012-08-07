@@ -160,6 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\play_hover - copia.png" />
+    <None Include="Resources\play - copia.png" />
+    <None Include="Resources\play_hover.png" />
+    <None Include="Resources\play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

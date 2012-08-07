@@ -198,7 +198,8 @@ namespace WindowsFormsApplication1
 
         private void play_Click(object sender, EventArgs e)
         {
-
+            string wowpath = String.Format(@"{0}/Wow.exe", wow.GetValue("InstallPath").ToString());
+            System.Diagnostics.Process.Start(wowpath);
         }
 
     }
