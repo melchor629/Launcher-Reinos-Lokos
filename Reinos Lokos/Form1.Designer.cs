@@ -55,11 +55,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Comica BD", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Location = new System.Drawing.Point(12, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(403, 90);
+            this.label1.Size = new System.Drawing.Size(358, 77);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dark Nights";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -218,12 +218,13 @@
             this.play.BackColor = System.Drawing.Color.Transparent;
             this.play.Cursor = System.Windows.Forms.Cursors.Hand;
             this.play.Image = global::WindowsFormsApplication1.Properties.Resources.play___copia;
-            this.play.ImageKey = "(ninguno)";
             this.play.Location = new System.Drawing.Point(303, 468);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(243, 179);
             this.play.TabIndex = 14;
             this.play.Click += new System.EventHandler(this.play_Click);
+            this.play.MouseLeave += new System.EventHandler(this.play_MouseLeave);
+            this.play.MouseHover += new System.EventHandler(this.play_MouseHover);
             // 
             // pictureBox2
             // 

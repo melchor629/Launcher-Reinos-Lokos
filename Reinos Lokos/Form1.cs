@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
+        /* Cambia el realmlist */
         private void Form1_Load(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1
         {
 
         }
-
+        /* Abre la web */
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -77,12 +77,12 @@ namespace WindowsFormsApplication1
             }
             catch { }
         }
-
+        /* Icono de notificación que minimiza la ventana */
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /* Noticias... */
         private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 			webBrowser2.Visible = false;
@@ -91,7 +91,7 @@ namespace WindowsFormsApplication1
 					webBrowser2.Visible = true;
 				}
         }
-
+        /* 2º Botón que te lleva a algun sitio */
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -100,18 +100,18 @@ namespace WindowsFormsApplication1
             }
             catch { }
         }
-
+        /* NADA */
         private void statusLabel_Click_1(object sender, EventArgs e)
         {
            
         }
-        
+        /* NI IDEA */
         private RegistryKey wow = null;
         private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
-        
+        /* Comprueba si está abierto los reinos */
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             bool status = false;
@@ -174,7 +174,7 @@ namespace WindowsFormsApplication1
                 });
             }
         }
-
+        /* Cerrar ventana */
         private void cerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -195,7 +195,16 @@ namespace WindowsFormsApplication1
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+        /* Botón para jugar */
+        private void play_MouseHover(object sender, EventArgs e)
+        {
+            play.Image = Properties.Resources.play_hover___copia;
+        }
 
+        private void play_MouseLeave(object sender, EventArgs e)
+        {
+            play.Image = Properties.Resources.play___copia;
+        }
         private void play_Click(object sender, EventArgs e)
         {
             string wowpath = String.Format(@"{0}/Wow.exe", wow.GetValue("InstallPath").ToString());
