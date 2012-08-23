@@ -173,6 +173,54 @@ namespace WindowsFormsApplication1
                     }
                 });
             }
+
+            var URLString = "http://dark-night.no-ip.org/Scripts/news.php";
+            string xmlStr;
+            using (var wc = new WebClient())
+            {
+                xmlStr = wc.DownloadString(URLString);
+            }
+            var xDoc = new XmlDocument();
+            xDoc.LoadXml(xmlStr);
+            //var xDocE = new XmlException();
+                try
+                {
+                    XmlNodeList personas = xDoc.GetElementsByTagName("noticias");
+
+                    XmlNodeList lista =
+                        ((XmlElement)personas[0]).GetElementsByTagName("noticia"); 
+                  }
+                catch (System.Xml.XmlException)
+                {
+                    MessageBox.Show("Error en XML");
+                }
+                finally
+                {
+                   XmlNodeList personas = xDoc.GetElementsByTagName("noticias");
+
+                    XmlNodeList lista =
+                        ((XmlElement)personas[0]).GetElementsByTagName("noticia"); 
+                    foreach (XmlElement nodo in lista)
+                    {
+                        int i = 0;
+                    XmlNodeList nNombre =
+                    nodo.GetElementsByTagName("titulo");
+
+                    XmlNodeList nApellido1 =
+                    nodo.GetElementsByTagName("contenido");
+
+                    XmlNodeList nApellido2 =
+                    nodo.GetElementsByTagName("autor");
+
+                    XmlNodeList nLink =
+                    nodo.GetElementsByTagName("link");
+
+                    String mensahe = "Elementos: " + nNombre[i++].InnerText + " " + nApellido1[i++].InnerText + " " + nApellido2[i++].InnerText + " " + nLink[i++].InnerText + "";
+
+                    MessageBox.Show(mensahe);
+                    }
+            } 
+
         }
         /* Cerrar ventana */
         private void cerrar_Click(object sender, EventArgs e)
