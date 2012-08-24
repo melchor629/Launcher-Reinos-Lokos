@@ -82,15 +82,7 @@ namespace WindowsFormsApplication1
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        /* Noticias... */
-        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-			webBrowser2.Visible = false;
-			if (Settings.Default.noticias)
-            	{
-					webBrowser2.Visible = true;
-				}
-        }
+        
         /* 2º Botón que te lleva a algun sitio */
         private void button2_Click(object sender, EventArgs e)
         {
@@ -182,46 +174,102 @@ namespace WindowsFormsApplication1
             }
             var xDoc = new XmlDocument();
             xDoc.LoadXml(xmlStr);
-            //var xDocE = new XmlException();
-                try
-                {
-                    XmlNodeList personas = xDoc.GetElementsByTagName("noticias");
+            //MessageBox.Show(xmlStr); // Muestra todo el XML
 
-                    XmlNodeList lista =
-                        ((XmlElement)personas[0]).GetElementsByTagName("noticia"); 
-                  }
-                catch (System.Xml.XmlException)
-                {
-                    MessageBox.Show("Error en XML");
-                }
-                finally
-                {
-                   XmlNodeList personas = xDoc.GetElementsByTagName("noticias");
+                        XmlNodeList personas = xDoc.GetElementsByTagName("noticias");
 
-                    XmlNodeList lista =
-                        ((XmlElement)personas[0]).GetElementsByTagName("noticia"); 
-                    foreach (XmlElement nodo in lista)
-                    {
-                        int i = 0;
-                    XmlNodeList nNombre =
-                    nodo.GetElementsByTagName("titulo");
+                        XmlNodeList lista = ((XmlElement)personas[0]).GetElementsByTagName("noticia");
 
-                    XmlNodeList nApellido1 =
-                    nodo.GetElementsByTagName("contenido");
+                        foreach (XmlElement nodo in lista)
+                        {
 
-                    XmlNodeList nApellido2 =
-                    nodo.GetElementsByTagName("autor");
+                            int i = 0;
+                            XmlNodeList titulo =
+                            nodo.GetElementsByTagName("titulo");
 
-                    XmlNodeList nLink =
-                    nodo.GetElementsByTagName("link");
+                            XmlNodeList autor =
+                            nodo.GetElementsByTagName("autor");
 
-                    String mensahe = "Elementos: " + nNombre[i++].InnerText + " " + nApellido1[i++].InnerText + " " + nApellido2[i++].InnerText + " " + nLink[i++].InnerText + "";
+                            XmlNodeList contenido =
+                            nodo.GetElementsByTagName("contenido");
 
-                    MessageBox.Show(mensahe);
-                    }
-            } 
+                            XmlNodeList link =
+                            nodo.GetElementsByTagName("link");
+
+                            //String mensahe = "" + titulo[i].InnerText + " " + autor[i].InnerText + " " + contenido[i].InnerText + " " + link[i].InnerText + "";
+
+                            //MessageBox.Show(mensahe);
+
+                            /** Cambiando cosas :D */
+                            titulo0.Invoke((MethodInvoker)delegate
+                            {
+                                this.titulo0.Text = titulo[0].InnerText;
+                            });
+                            autor0.Invoke((MethodInvoker)delegate
+                            {
+                                this.autor0.Text = autor[0].InnerText;
+                            });
+                            mensaje0.Invoke((MethodInvoker)delegate
+                            {
+                                this.mensaje0.Text = contenido[0].InnerText;
+                            });
+                            linkLabel0.Invoke((MethodInvoker)delegate
+                            {
+                                this.linkLabel0.Text = link[0].InnerText;
+                            });
+
+                            i++;
+                        }
+            /* Mas cambios */
+            titulo1.Invoke((MethodInvoker)delegate
+            {
+                this.titulo1.Text = otrostitulos(1);
+            });
+
+            titulo2.Invoke((MethodInvoker)delegate
+            {
+                this.titulo2.Text = otrostitulos(2);
+            });
+
+            titulo3.Invoke((MethodInvoker)delegate
+            {
+                this.titulo3.Text = otrostitulos(3);
+            });
 
         }
+
+        static String otrostitulos(int id)
+        {
+            var URLString = "http://dark-night.no-ip.org/Scripts/news.php?id=" + id + "";
+            string xmlStr;
+            using (var wc = new WebClient())
+            {
+                xmlStr = wc.DownloadString(URLString);
+            }
+            var xDoc = new XmlDocument();
+            xDoc.LoadXml(xmlStr);
+            XmlNodeList titulo = xDoc.GetElementsByTagName("titulo");
+
+            string erreturn = titulo[0].InnerText;
+            return erreturn;
+        }
+
+        static String otroslinks(int id)
+        {
+            var URLString = "http://dark-night.no-ip.org/Scripts/news.php?link=" + id + "";
+            string xmlStr;
+            using (var wc = new WebClient())
+            {
+                xmlStr = wc.DownloadString(URLString);
+            }
+            var xDoc = new XmlDocument();
+            xDoc.LoadXml(xmlStr);
+            XmlNodeList titulo = xDoc.GetElementsByTagName("titulo");
+
+            string erreturn = titulo[0].InnerText;
+            return erreturn;
+        }
+
         /* Cerrar ventana */
         private void cerrar_Click(object sender, EventArgs e)
         {
@@ -257,6 +305,26 @@ namespace WindowsFormsApplication1
         {
             string wowpath = String.Format(@"{0}/Wow.exe", wow.GetValue("InstallPath").ToString());
             System.Diagnostics.Process.Start(wowpath);
+        }
+
+        private void linkLabel0_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(otroslinks(1));
+        }
+
+        private void titulo1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(otroslinks(1));
+        }
+
+        private void titulo2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(otroslinks(2));
+        }
+
+        private void titulo3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(otroslinks(3));
         }
 
     }

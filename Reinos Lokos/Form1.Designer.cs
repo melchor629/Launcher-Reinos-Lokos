@@ -34,8 +34,6 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.button2 = new System.Windows.Forms.Button();
             this.status1 = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -47,7 +45,13 @@
             this.barradesp = new System.Windows.Forms.Label();
             this.play = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.titulo0 = new System.Windows.Forms.Label();
+            this.mensaje0 = new System.Windows.Forms.Label();
+            this.autor0 = new System.Windows.Forms.Label();
+            this.linkLabel0 = new System.Windows.Forms.LinkLabel();
+            this.titulo1 = new System.Windows.Forms.Label();
+            this.titulo2 = new System.Windows.Forms.Label();
+            this.titulo3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,28 +96,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(284, 269);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("http://dark-night.no-ip.org/panel/login/?dash", System.UriKind.Absolute);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.periodico;
-            this.pictureBox1.InitialImage = global::WindowsFormsApplication1.Properties.Resources.periodico;
-            this.pictureBox1.Location = new System.Drawing.Point(783, 301);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 55);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
-            // webBrowser2
-            // 
-            this.webBrowser2.Location = new System.Drawing.Point(645, 260);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(284, 290);
-            this.webBrowser2.TabIndex = 5;
-            this.webBrowser2.Url = new System.Uri("http://reinoslokos.no-ip.org/mobile/", System.UriKind.Absolute);
-            this.webBrowser2.Visible = false;
             // 
             // button2
             // 
@@ -237,6 +219,104 @@
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
+            // titulo0
+            // 
+            this.titulo0.AutoSize = true;
+            this.titulo0.BackColor = System.Drawing.Color.Transparent;
+            this.titulo0.Font = new System.Drawing.Font("Decibel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.titulo0.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.titulo0.Location = new System.Drawing.Point(465, 282);
+            this.titulo0.MaximumSize = new System.Drawing.Size(380, 0);
+            this.titulo0.Name = "titulo0";
+            this.titulo0.Size = new System.Drawing.Size(102, 21);
+            this.titulo0.TabIndex = 16;
+            this.titulo0.Text = "Cargando...";
+            // 
+            // mensaje0
+            // 
+            this.mensaje0.AutoSize = true;
+            this.mensaje0.BackColor = System.Drawing.Color.Transparent;
+            this.mensaje0.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mensaje0.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.mensaje0.Location = new System.Drawing.Point(465, 329);
+            this.mensaje0.MaximumSize = new System.Drawing.Size(370, 0);
+            this.mensaje0.Name = "mensaje0";
+            this.mensaje0.Size = new System.Drawing.Size(67, 13);
+            this.mensaje0.TabIndex = 17;
+            this.mensaje0.Text = "Cargando...";
+            // 
+            // autor0
+            // 
+            this.autor0.AutoSize = true;
+            this.autor0.BackColor = System.Drawing.Color.Transparent;
+            this.autor0.Font = new System.Drawing.Font("Comica BD", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autor0.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.autor0.Location = new System.Drawing.Point(755, 268);
+            this.autor0.Name = "autor0";
+            this.autor0.Size = new System.Drawing.Size(60, 15);
+            this.autor0.TabIndex = 18;
+            this.autor0.Text = "Cargando..";
+            // 
+            // linkLabel0
+            // 
+            this.linkLabel0.ActiveLinkColor = System.Drawing.Color.Aquamarine;
+            this.linkLabel0.AutoSize = true;
+            this.linkLabel0.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel0.Font = new System.Drawing.Font("Doppio One", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel0.LinkColor = System.Drawing.Color.LightSeaGreen;
+            this.linkLabel0.Location = new System.Drawing.Point(465, 268);
+            this.linkLabel0.Name = "linkLabel0";
+            this.linkLabel0.Size = new System.Drawing.Size(55, 14);
+            this.linkLabel0.TabIndex = 19;
+            this.linkLabel0.TabStop = true;
+            this.linkLabel0.Text = "linkLabel1";
+            this.linkLabel0.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel0_LinkClicked);
+            // 
+            // titulo1
+            // 
+            this.titulo1.AutoSize = true;
+            this.titulo1.BackColor = System.Drawing.Color.Transparent;
+            this.titulo1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.titulo1.Font = new System.Drawing.Font("Decibel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.titulo1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.titulo1.Location = new System.Drawing.Point(465, 389);
+            this.titulo1.MaximumSize = new System.Drawing.Size(380, 0);
+            this.titulo1.Name = "titulo1";
+            this.titulo1.Size = new System.Drawing.Size(102, 21);
+            this.titulo1.TabIndex = 20;
+            this.titulo1.Text = "Cargando...";
+            this.titulo1.Click += new System.EventHandler(this.titulo1_Click);
+            // 
+            // titulo2
+            // 
+            this.titulo2.AutoSize = true;
+            this.titulo2.BackColor = System.Drawing.Color.Transparent;
+            this.titulo2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.titulo2.Font = new System.Drawing.Font("Decibel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.titulo2.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.titulo2.Location = new System.Drawing.Point(465, 410);
+            this.titulo2.MaximumSize = new System.Drawing.Size(380, 0);
+            this.titulo2.Name = "titulo2";
+            this.titulo2.Size = new System.Drawing.Size(102, 21);
+            this.titulo2.TabIndex = 21;
+            this.titulo2.Text = "Cargando...";
+            this.titulo2.Click += new System.EventHandler(this.titulo2_Click);
+            // 
+            // titulo3
+            // 
+            this.titulo3.AutoSize = true;
+            this.titulo3.BackColor = System.Drawing.Color.Transparent;
+            this.titulo3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.titulo3.Font = new System.Drawing.Font("Decibel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.titulo3.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.titulo3.Location = new System.Drawing.Point(465, 431);
+            this.titulo3.MaximumSize = new System.Drawing.Size(380, 0);
+            this.titulo3.Name = "titulo3";
+            this.titulo3.Size = new System.Drawing.Size(102, 21);
+            this.titulo3.TabIndex = 22;
+            this.titulo3.Text = "Cargando...";
+            this.titulo3.Click += new System.EventHandler(this.titulo3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +324,13 @@
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(840, 630);
+            this.Controls.Add(this.titulo3);
+            this.Controls.Add(this.titulo2);
+            this.Controls.Add(this.titulo1);
+            this.Controls.Add(this.linkLabel0);
+            this.Controls.Add(this.autor0);
+            this.Controls.Add(this.mensaje0);
+            this.Controls.Add(this.titulo0);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.play);
             this.Controls.Add(this.cerrar);
@@ -253,8 +340,6 @@
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.status1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.webBrowser2);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.barradesp);
@@ -265,7 +350,6 @@
             this.Text = "Reinos Lokos";
             this.TransparencyKey = System.Drawing.Color.Magenta;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,8 +362,6 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label status1;
         private System.Windows.Forms.Label statusLabel;
@@ -291,6 +373,13 @@
         private System.Windows.Forms.Label barradesp;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label play;
+        private System.Windows.Forms.Label titulo0;
+        private System.Windows.Forms.Label mensaje0;
+        private System.Windows.Forms.Label autor0;
+        private System.Windows.Forms.LinkLabel linkLabel0;
+        private System.Windows.Forms.Label titulo1;
+        private System.Windows.Forms.Label titulo2;
+        private System.Windows.Forms.Label titulo3;
     }
 }
 
