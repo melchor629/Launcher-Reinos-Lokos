@@ -166,6 +166,7 @@ namespace WindowsFormsApplication1
                 });
             }
 
+            /* NOTICIAS */
             var URLString = "http://dark-night.no-ip.org/Scripts/news.php";
             string xmlStr;
             using (var wc = new WebClient())
@@ -176,50 +177,43 @@ namespace WindowsFormsApplication1
             xDoc.LoadXml(xmlStr);
             //MessageBox.Show(xmlStr); // Muestra todo el XML
 
-                        XmlNodeList personas = xDoc.GetElementsByTagName("noticias");
+            XmlNodeList personas = xDoc.GetElementsByTagName("noticias");
 
-                        XmlNodeList lista = ((XmlElement)personas[0]).GetElementsByTagName("noticia");
+            XmlNodeList lista = ((XmlElement)personas[0]).GetElementsByTagName("noticia");
 
-                        foreach (XmlElement nodo in lista)
-                        {
+            foreach (XmlElement nodo in lista)
+            {
 
-                            int i = 0;
-                            XmlNodeList titulo =
-                            nodo.GetElementsByTagName("titulo");
+                int i = 0;
+                XmlNodeList titulo =
+                nodo.GetElementsByTagName("titulo");
 
-                            XmlNodeList autor =
-                            nodo.GetElementsByTagName("autor");
+                XmlNodeList autor = nodo.GetElementsByTagName("autor");
 
-                            XmlNodeList contenido =
-                            nodo.GetElementsByTagName("contenido");
+                XmlNodeList contenido = nodo.GetElementsByTagName("contenido");
 
-                            XmlNodeList link =
-                            nodo.GetElementsByTagName("link");
+                XmlNodeList link = nodo.GetElementsByTagName("link");
 
-                            //String mensahe = "" + titulo[i].InnerText + " " + autor[i].InnerText + " " + contenido[i].InnerText + " " + link[i].InnerText + "";
+                /** Cambiando cosas :D */
+                titulo0.Invoke((MethodInvoker)delegate
+                {
+                    this.titulo0.Text = titulo[0].InnerText;
+                });
+                autor0.Invoke((MethodInvoker)delegate
+                {
+                    this.autor0.Text = autor[0].InnerText;
+                });
+                mensaje0.Invoke((MethodInvoker)delegate
+                {
+                    this.mensaje0.Text = contenido[0].InnerText;
+                });
+                linkLabel0.Invoke((MethodInvoker)delegate
+                {
+                    this.linkLabel0.Text = link[0].InnerText;
+                });
 
-                            //MessageBox.Show(mensahe);
-
-                            /** Cambiando cosas :D */
-                            titulo0.Invoke((MethodInvoker)delegate
-                            {
-                                this.titulo0.Text = titulo[0].InnerText;
-                            });
-                            autor0.Invoke((MethodInvoker)delegate
-                            {
-                                this.autor0.Text = autor[0].InnerText;
-                            });
-                            mensaje0.Invoke((MethodInvoker)delegate
-                            {
-                                this.mensaje0.Text = contenido[0].InnerText;
-                            });
-                            linkLabel0.Invoke((MethodInvoker)delegate
-                            {
-                                this.linkLabel0.Text = link[0].InnerText;
-                            });
-
-                            i++;
-                        }
+                i++;
+            }
             /* Mas cambios */
             titulo1.Invoke((MethodInvoker)delegate
             {
@@ -238,6 +232,7 @@ namespace WindowsFormsApplication1
 
         }
 
+        /* Obtiene los titulos de los antiguos posts */
         static String otrostitulos(int id)
         {
             var URLString = "http://dark-night.no-ip.org/Scripts/news.php?id=" + id + "";
@@ -254,6 +249,7 @@ namespace WindowsFormsApplication1
             return erreturn;
         }
 
+        /* Obtiene el link de los antiguos posts */
         static String otroslinks(int id)
         {
             var URLString = "http://dark-night.no-ip.org/Scripts/news.php?link=" + id + "";
@@ -307,6 +303,7 @@ namespace WindowsFormsApplication1
             System.Diagnostics.Process.Start(wowpath);
         }
 
+        /* Links */
         private void linkLabel0_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(otroslinks(1));
